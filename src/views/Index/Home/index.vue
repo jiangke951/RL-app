@@ -49,7 +49,7 @@
                 <p>可视化RL可以在上方导航或右上方个人中心处查看, 祝你使用愉快</p>
             </div>
             <div class="btn">
-                <el-button type="primary" @click.native.prevent.stop="goReserveSeat">新建实验</el-button>
+                <el-button type="primary" @click.native.prevent.stop="goReserveSeat">新建算法</el-button>
             </div>
         </div>
     </div>

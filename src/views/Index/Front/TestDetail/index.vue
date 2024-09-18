@@ -77,7 +77,7 @@
                      
                     <el-col :span="8"> 
                         <el-form-item label="learning_starts"  prop="learning_starts" >
-                            <el-input :style="{ width: '80px' }" disabled v-model.trim="testDetailForm.seed"></el-input>
+                            <el-input :style="{ width: '80px' }" disabled v-model.trim="testDetailForm.learning_starts"></el-input>
                         </el-form-item>
                     </el-col>  
                      
@@ -133,7 +133,7 @@
                 
             </el-form>
             <div slot="footer" class="dialog-footer" >
-                <el-button type="primary" @click.native.prevent.stop="evaluateTest('testDetailForm')">提交计算</el-button>
+                <el-button type="primary" @click.native.prevent.stop="evaluateTest('testDetailForm')">参数优化</el-button>
                 <!-- <el-button type="primary" @click.native.prevent.stop="updateTest('testUpdateForm')">确 定</el-button> -->
             </div>
             <!-- <div class="el-dialog__title">mean reward:-1303.4206398</div>  -->
@@ -393,18 +393,18 @@ export default {
                 user_name: testinfo.user_name,              
                 test_status: testinfo.test_status,
                 learning_rate: hyperparameters.learning_rate,
-                batch_size: hyperparameters.batch_size,
-                tau: hyperparameters.tau,
-                gamma: hyperparameters.gamma,
-                train_freq: hyperparameters.train_freq,
-                learning_rate: hyperparameters.learning_rate,
-                gradient_steps: hyperparameters.gradient_steps,
-                exploration_fraction: hyperparameters.exploration_fraction,
-                exploration_initial_eps: hyperparameters.exploration_initial_eps,
-                buffer_size: hyperparameters.buffer_size,
-                ent_coef: hyperparameters.ent_coef,
-                vf_coef: hyperparameters.vf_coef,
-                reward: hyperparameters.reward,
+                batch_size: hyperparameters.batch_size ?? '-',
+                tau: hyperparameters.tau ?? '-',
+                gamma: hyperparameters.gamma ?? '-',
+                train_freq: hyperparameters.train_freq ?? '-',
+                learning_starts: hyperparameters.learning_starts ?? '-',
+                gradient_steps: hyperparameters.gradient_steps ?? '-',
+                exploration_fraction: hyperparameters.exploration_fraction ?? '-',
+                exploration_initial_eps: hyperparameters.exploration_initial_eps ?? '-',
+                buffer_size: hyperparameters.buffer_size ?? '-',
+                ent_coef: hyperparameters.ent_coef ?? '-',
+                vf_coef:hyperparameters.vf_coef ?? '-',
+                reward: hyperparameters.reward ?? '-',
             }
         
            

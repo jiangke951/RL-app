@@ -70,8 +70,8 @@
                                 <el-dropdown-menu slot="dropdown">
                                     <el-dropdown-item
                                         @click.native.prevent.stop="goUserPath('fmyinfo')">个人信息</el-dropdown-item>
-                                    <el-dropdown-item
-                                        @click.native.prevent.stop="goReserveInfo('reserveinfo')">查看实验</el-dropdown-item>
+                                    <!-- <el-dropdown-item
+                                        @click.native.prevent.stop="goReserveInfo('reserveinfo')">查看实验</el-dropdown-item> -->
                                     <el-dropdown-item @click.native.prevent.stop="logout">退出</el-dropdown-item>
                                 </el-dropdown-menu>
                             </el-dropdown>
